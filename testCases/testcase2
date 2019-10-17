@@ -1,0 +1,6 @@
+2
+(requirement being tested) convert int to specified char
+BaseHyphenatedIdentifierValidator.java
+convertDigitToChar(int checkDigit)
+10 (need to include command-line arguement(s))
+X
