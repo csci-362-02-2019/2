@@ -1,6 +1,0 @@
-01
-(requirement being tested) changes int into specified char
-BaseHyphenatedIdentifierValidator.java
-convertDigitToChar(int checkDigit)
-0 (need to include command-line arguement(s))
-A
