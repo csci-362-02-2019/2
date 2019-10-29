@@ -2,5 +2,5 @@
 UnallowedIdentiferException thrown when incorrectly formatted identifier is entered.
 LuhnIdentifierValidator.java
 isValid()
-"Sam" (need to include command-line arguement(s))
+Sam
 UnallowedIdentifierException thrown.
