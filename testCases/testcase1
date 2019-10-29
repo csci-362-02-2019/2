@@ -2,5 +2,5 @@
 true returned when valid identifier is entered.
 LuhnIdentifierValidator.java
 isValid()
-"a-3" (need to include command-line arguement(s))
+a-3
 true
