@@ -58,15 +58,19 @@ elif [ "$counter" -eq 3 ];then
 
 cd ..
 
+
+#prints out expected output from test case
 echo "<td>" >> /home/wright/testCases/reports/testReport.html
 echo ${lineStorage[5]}>> /home/wright/testCases/reports/testReport.html
 echo "</td>" >> /home/wright/testCases/reports/testReport.html 
 
-output=$(echo ${lineStorage[4]} | java -classpath ${lineStorage[6]} "${lineStorage[4]}")
+#pipes input into java driver classes and puts them in html table
+output=$(echo ${lineStorage[4]} | java -classpath ${lineStorage[6]} ${lineStorage[7]} "${lineStorage[4]}")
 echo "<td>" >> /home/wright/testCases/reports/testReport.html
 echo $output >> /home/wright/testCases/reports/testReport.html
 echo "</td>" >> /home/wright/testCases/reports/testReport.html
 
+#compares expected output to actual output and decides if test passed or failed
 echo "<td>" >> /home/wright/testCases/reports/testReport.html
 if [ "$output" == "${lineStorage[5]}" ];then	
 	echo "<p style="color:green"> Passed.</p>" >> /home/wright/testCases/reports/testReport.html 
