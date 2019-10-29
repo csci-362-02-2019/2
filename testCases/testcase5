@@ -2,5 +2,5 @@
 char is entered and the checkDigit is returned
 LuhnIdentifierValidator.java
 getCheckDigit()
-"b" (need to include command-line arguement(s))
+b
 1
