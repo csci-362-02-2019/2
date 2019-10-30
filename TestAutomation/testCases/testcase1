@@ -1,4 +1,4 @@
-01
+01 --- 8
 true returned when valid identifier is entered.
 LuhnIdentifierValidator.java
 isValid()
