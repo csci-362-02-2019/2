@@ -21,7 +21,7 @@ public class LuhnIdentifierValidator extends BaseHyphenatedIdentifierValidator {
 	private static final String LUHN_NAME = "Luhn CheckDigit Validator";
 	
 	@Override
-	protected int getCheckDigit(String undecoratedIdentifier) {
+	public int getCheckDigit(String undecoratedIdentifier) {
 		//		 remove leading or trailing whitespace, convert to uppercase
 		String trimmedUppercaseUndecoratedIdentifier = undecoratedIdentifier.trim().toUpperCase();
 		
