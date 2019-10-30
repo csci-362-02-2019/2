@@ -1,0 +1,3 @@
+[submodule "project/openmrs-core"]
+	path = project/openmrs-core
+	url = https://github.com/openmrs/openmrs-core.git
