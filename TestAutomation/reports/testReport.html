@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test Report</title>
+</head>
+<body>
+<table border=1 style=width:75%>
+<tr>
+<th> Test # </th>
+<th> Requirement </th>
+<th> class name </th>
+<th> method name </th>
+<th> input </th>
+<th> expected output </th>
+<th> actual output </th>
+<th> pass/fail </th></tr>
+<tr>
+<td>
+01 --- 8
+</td>
+<td>
+true returned when valid identifier is entered.
+</td>
+<td>
+LuhnIdentifierValidator.java
+</td>
+<td>
+isValid()
+</td>
+<td>
+a-3
+</td>
+</td>
+</td>
+</td>
+<td>
+true
+</td>
+<td>
+
+</td>
+<td
+style="color:#FF0000;">Failed
+</td>
+</tr>
+<tr>
+<td>
+02
+</td>
+<td>
+false returned when invalid identifier is entered.
+</td>
+<td>
+LuhnIdentifierValidator.java
+</td>
+<td>
+isValid()
+</td>
+<td>
+a-4
+</td>
+</td>
+<td>
+false
+</td>
+<td>
+
+</td>
+<td
+style="color:#FF0000;">Failed
+</td>
+</tr>
+<tr>
+<td>
+03
+</td>
+<td>
+UnallowedIdentiferException thrown when incorrectly formatted identifier is entered.
+</td>
+<td>
+LuhnIdentifierValidator.java
+</td>
+<td>
+isValid()
+</td>
+<td>
+Sam
+</td>
+</td>
+<td>
+UnallowedIdentifierException thrown.
+</td>
+<td>
+
+</td>
+<td
+style="color:#FF0000;">Failed
+</td>
+</tr>
+<tr>
+<td>
+04
+</td>
+<td>
+char is entered and the checkDigit is returned
+</td>
+<td>
+LuhnIdentifierValidator.java
+</td>
+<td>
+getCheckDigit()
+</td>
+<td>
+a
+</td>
+</td>
+<td>
+3
+</td>
+<td>
+
+</td>
+<td
+style="color:#FF0000;">Failed
+</td>
+</tr>
+<tr>
+<td>
+04
+</td>
+<td>
+char is entered and the checkDigit is returned
+</td>
+<td>
+LuhnIdentifierValidator.java
+</td>
+<td>
+getCheckDigit()
+</td>
+<td>
+b
+</td>
+</td>
+<td>
+1
+</td>
+<td>
+
+</td>
+<td
+style="color:#FF0000;">Failed
+</td>
+</tr>
