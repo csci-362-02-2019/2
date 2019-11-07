@@ -26,13 +26,13 @@ public class TestDriver extends LuhnIdentifierValidator {
 			//Test 1
 			LuhnIdentifierValidator LIV0 = new LuhnIdentifierValidator();
 			boolean result1;
-			String line1 = Files.readAllLines(Paths.get("/Users/samle/OneDrive/Documents/CSCI 362/testcase1.txt")).get(4);
+			String line1 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase1.txt")).get(4);
 			result1 = LIV0.isValid(line1);
 			System.out.println(result1);
 			
 			//Test 2
 			boolean result2;
-			String line2 = Files.readAllLines(Paths.get("/Users/samle/OneDrive/Documents/CSCI 362/testcase2.txt")).get(4);
+			String line2 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase1.txt")).get(4);
 			result2 = LIV0.isValid(line2);
 			System.out.println(result2);
 
@@ -41,7 +41,7 @@ public class TestDriver extends LuhnIdentifierValidator {
 			try {
 				LuhnIdentifierValidator LIV1 = new LuhnIdentifierValidator();
 				boolean result3;
-				String line3 = Files.readAllLines(Paths.get("/Users/samle/OneDrive/Documents/CSCI 362/testcase3.txt")).get(4);
+				String line3 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase1.txt")).get(4);
 				result3 = LIV1.isValid(line3);
 				System.out.println(result3);
 			}
@@ -52,14 +52,14 @@ public class TestDriver extends LuhnIdentifierValidator {
 			//Test 4
 			LuhnIdentifierValidator LIV2 = new LuhnIdentifierValidator();
 			int result4;
-			String line4 = Files.readAllLines(Paths.get("/Users/samle/OneDrive/Documents/CSCI 362/testcase4.txt")).get(4);
+			String line4 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase1.txt")).get(4);
 			result4 = LIV2.getCheckDigit(line4);
 			System.out.println(result4);
 
 			//Test 5
 			LuhnIdentifierValidator LIV3 = new LuhnIdentifierValidator();
 			int result5;
-			String line5 = Files.readAllLines(Paths.get("/Users/samle/OneDrive/Documents/CSCI 362/testcase5.txt")).get(4);
+			String line5 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase1.txt")).get(4);
 			result5 = LIV3.getCheckDigit(line5);
 			System.out.println(result5);
 		}
