@@ -67,8 +67,18 @@ echo "<td>" >> reports/testReport.html
 echo ${lineStorage[5]}>> reports/testReport.html
 echo "</td>" >> reports/testReport.html
 
+cd ..
+javac testdriver2.java
+java -classpath ~/2 testdriver2
+while IFS= read -r line; do
+	echo "Results from test report: $line"
+done < testcase1Report.txt
+cd TestAutomation
+
+
+
 #pipes input into java driver classes and puts them in html table
-output=$(echo ${lineStorage[4]} | java -classpath ${lineStorage[6]} ${lineStorage[7]} "${lineStorage[4]}")
+output=$(echo $line)
 echo "<td>" >> reports/testReport.html
 echo $output >> reports/testReport.html
 echo "</td>" >> reports/testReport.html
