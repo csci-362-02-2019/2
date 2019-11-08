@@ -4,5 +4,5 @@ OpenmrsUtil.java
 isStringinArray()
 "Sam"|["Sam","Wright"]
 true
-../2
-testdriver2.java
+.:./project/src/api/target/classes:./project/src/api/target/classes/org/openmrs/util/OpenmrsUtil.class:./project/src/lib/commons-logging-1.2.jar:./project/src/lib/commons-io-1.4.jar
+testdriver2
