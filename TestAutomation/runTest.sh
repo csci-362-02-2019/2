@@ -2,7 +2,7 @@
 
 echo "changing directory to testCases..."
 cd testCases
-echo "reading test cases..."`
+echo "reading test cases..."
 
 rm -r ../reports/*	#clear the reports directory
 #sets up initial html Doc---------------------------------------------------
@@ -68,7 +68,7 @@ echo ${lineStorage[5]}>> reports/testReport.html
 echo "</td>" >> reports/testReport.html
 
 #pipes input into java driver classes and puts them in html table
-output=$(echo ${lineStorage[4]} | java -cp ${lineStorage[6]} ${lineStorage[7]} "${lineStorage[4]}")
+output=$(echo ${lineStorage[4]} | java -classpath ${lineStorage[6]} ${lineStorage[7]} "${lineStorage[4]}")
 echo "<td>" >> reports/testReport.html
 echo $output >> reports/testReport.html
 echo "</td>" >> reports/testReport.html
