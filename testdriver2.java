@@ -1,3 +1,7 @@
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.io.IOException;
+
 class testdriver2 {
 	
 	public static boolean isStringInArray(String str, String[] arr) {
@@ -25,13 +29,18 @@ class testdriver2 {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("HelloWorld! this is new");
-		testdriver2 test1 = new testdriver2();
-		String[] array = {"Sam","Wright"};
-		String sam = "Sam";
-		System.out.println(test1.isStringInArray(sam, array));
-		System.out.println(test1.containsDigit(sam));
-		
+		try {
+			//System.out.println("HelloWorld! this is new");
+			testdriver2 test1 = new testdriver2();
+			String[] array = {"Sam","Wright"};
+			String sam = "Sam";
+			String line1 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase1")).get(4);
+			String[] array1 = line1.split("|");
+			System.out.println(test1.isStringInArray(array1[0], array1));
+			System.out.println(test1.containsDigit(sam));
+		} catch (IOException e) {
+			System.out.println(e);
+		}
 	}
 }
 
