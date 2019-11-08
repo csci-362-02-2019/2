@@ -1,7 +1,17 @@
 01
+<<<<<<< HEAD
 true returned when string is in array
 OpenmrsUtil.java
 isStringinArray()
 "Sam"|["Sam","Wright"]
 true
 
+=======
+true returned when valid identifier is entered.
+DurationInMillis.java
+isValid()
+10, SECONDS
+true
+
+TestDriver1.java
+>>>>>>> origin/master
