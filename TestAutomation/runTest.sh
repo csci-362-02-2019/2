@@ -70,23 +70,27 @@ echo "</td>" >> reports/testReport.html
 cd ..
 javac testdriver2.java
 java -classpath ~/2 testdriver2
-while IFS= read -r line; do
-	echo "Results from test report: $line"
-done < testcase1Report.txt
+
+
+
+IFS=$'\n' read -d '' -r -a lines < ~/2/testcase1Report.txt
+
 cd TestAutomation
 
 
 
 #pipes input into java driver classes and puts them in html table
-output=$(echo $line)
+output=$(echo ${lines[($testCaseTracker)-1]})
 echo "<td>" >> reports/testReport.html
 echo $output >> reports/testReport.html
 echo "</td>" >> reports/testReport.html
 
+echo ${lineStorage[5]}
+echo $output
 
 #compares expected output to actual output and decides if test passed or failed
 echo "<td" >> reports/testReport.html
-if [ "$output" == "${lineStorage[5]}" ];then
+if [ "$output" = "${lineStorage[5]}" ]; then
    echo "style=\"color:#0D7010;\">Passed" >> reports/testReport.html
 else
    echo "style=\"color:#FF0000;\">Failed" >> reports/testReport.html
