@@ -4,5 +4,5 @@ OpenmrsUtil.java
 isStringinArray()
 "Sam"|["Sam","Wright"]
 true
-../2
-testdriver2.java
+~/2
+testdriver2

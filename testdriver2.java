@@ -1,6 +1,8 @@
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.io.IOException;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 
 class testdriver2 {
 	
@@ -37,7 +39,15 @@ class testdriver2 {
 			String line1 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase1")).get(4);
 			String[] array1 = line1.split("|");
 			System.out.println(test1.isStringInArray(array1[0], array1));
-			System.out.println(test1.containsDigit(sam));
+
+			String results = Boolean.toString(test1.isStringInArray(array1[0], array1));
+
+			BufferedWriter writer = new BufferedWriter(new FileWriter("/home/samlemon/2/testcase1Report.txt"));
+    			writer.write(results);
+     
+    			writer.close();
+
+			//System.out.println(test1.containsDigit(sam));
 		} catch (IOException e) {
 			System.out.println(e);
 		}
