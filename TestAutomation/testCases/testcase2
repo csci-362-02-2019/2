@@ -1,8 +1,6 @@
 02
-false returned when invalid identifier is entered.
-LuhnIdentifierValidator.java
-isValid()
-a-4
+true returned when string is in array
+OpenmrsUtil.java
+isStringinArray()
+"Dylan"|["Sam","Wright"]
 false
-/home/wright/2/project/openmrs-core/api/src/main/java/org/openmrs/patient/impl
-TestDriver.java
