@@ -1,8 +1,7 @@
 01
 true returned when string is in array
 OpenmrsUtil.java
-isStringinArray()
-"Sam"|["Sam","Wright"]
+isStringinArray(String str, String[] arr)
+"Sam"&"Sam","Wright"
 true
-~/2
-testdriver2
+

@@ -1,8 +1,7 @@
 03
-UnallowedIdentiferException thrown when incorrectly formatted identifier is entered.
-LuhnIdentifierValidator.java
-isValid()
-Sam
-UnallowedIdentifierException thrown.
-/home/wright/2/project/openmrs-core/api/src/main/java/org/openmrs/patient/impl
-TestDriver.java
+false returned when string is null
+OpenmrsUtil.java
+isStringinArray(String str, String[] arr)
+&"Sam","Wright"
+false
+

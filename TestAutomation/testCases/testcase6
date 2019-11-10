@@ -1,0 +1,7 @@
+06
+false is returned when string is null
+OpenmrsUtil.java
+containsDigit(String test)
+
+false
+

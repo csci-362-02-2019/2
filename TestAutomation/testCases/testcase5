@@ -1,8 +1,7 @@
-04
-char is entered and the checkDigit is returned
-LuhnIdentifierValidator.java
-getCheckDigit()
-b
-1
-/home/wright/2/project/openmrs-core/api/src/main/java/org/openmrs/patient/impl
-TestDriver.java
+05
+false is returned when string contains a digit
+OpenmrsUtil.java
+containsDigit(String test)
+"Sam"
+false
+

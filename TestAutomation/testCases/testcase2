@@ -1,6 +1,6 @@
 02
-true returned when string is in array
+false returned when string is not in array
 OpenmrsUtil.java
-isStringinArray()
-"Dylan"|["Sam","Wright"]
+isStringinArray(String str, String[] arr)
+"Dylan"&"Sam","Wright"
 false

@@ -25,11 +25,10 @@ true returned when string is in array
 OpenmrsUtil.java
 </td>
 <td>
-isStringinArray()
+isStringinArray(String str
 </td>
 <td>
-"Sam"|["Sam","Wright"]
-</td>
+"Sam"&"Sam","Wright"
 </td>
 </td>
 </td>
@@ -48,26 +47,26 @@ style="color:#0D7010;">Passed
 02
 </td>
 <td>
-true returned when string is in array
+false returned when string is not in array
 </td>
 <td>
 OpenmrsUtil.java
 </td>
 <td>
-isStringinArray()
+isStringinArray(String str
 </td>
 <td>
-"Dylan"|["Sam","Wright"]
+"Dylan"&"Sam","Wright"
 </td>
 </td>
 <td>
 false
 </td>
 <td>
-true
+false
 </td>
 <td
-style="color:#FF0000;">Failed
+style="color:#0D7010;">Passed
 </td>
 </tr>
 <tr>
@@ -75,25 +74,24 @@ style="color:#FF0000;">Failed
 03
 </td>
 <td>
-UnallowedIdentiferException thrown when incorrectly formatted identifier is entered.
+false returned when string is null
 </td>
 <td>
-LuhnIdentifierValidator.java
+OpenmrsUtil.java
 </td>
 <td>
-isValid()
+isStringinArray(String str
 </td>
 <td>
-Sam
-</td>
+&"Sam","Wright"
 </td>
 </td>
 </td>
 <td>
-UnallowedIdentifierException thrown.
+false
 </td>
 <td>
-true
+false
 </td>
 <td
 style="color:#FF0000;">Failed
@@ -104,22 +102,21 @@ style="color:#FF0000;">Failed
 04
 </td>
 <td>
-char is entered and the checkDigit is returned
+true is returned when string contains a digit
 </td>
 <td>
-LuhnIdentifierValidator.java
+OpenmrsUtil.java
 </td>
 <td>
-getCheckDigit()
+containsDigit(String test)
 </td>
 <td>
-a
-</td>
+"Sam1"
 </td>
 </td>
 </td>
 <td>
-3
+true
 </td>
 <td>
 true
@@ -130,28 +127,83 @@ style="color:#FF0000;">Failed
 </tr>
 <tr>
 <td>
-04
+05
 </td>
 <td>
-char is entered and the checkDigit is returned
+false is returned when string contains a digit
 </td>
 <td>
-LuhnIdentifierValidator.java
+OpenmrsUtil.java
 </td>
 <td>
-getCheckDigit()
+containsDigit(String test)
 </td>
 <td>
-b
-</td>
+"Sam"
 </td>
 </td>
 </td>
 <td>
-1
+false
 </td>
 <td>
-true
+false
+</td>
+<td
+style="color:#FF0000;">Failed
+</td>
+</tr>
+<tr>
+<td>
+06
+</td>
+<td>
+false is returned when string is null
+</td>
+<td>
+OpenmrsUtil.java
+</td>
+<td>
+containsDigit(String test)
+</td>
+<td>
+
+</td>
+</td>
+</td>
+<td>
+false
+</td>
+<td>
+false
+</td>
+<td
+style="color:#0D7010;">Passed
+</td>
+</tr>
+<tr>
+<td>
+07
+</td>
+<td>
+true is returned when string is only digits
+</td>
+<td>
+OpenmrsUtil.java
+</td>
+<td>
+containsonlyDigits(String test)
+</td>
+<td>
+
+</td>
+</td>
+</td>
+<td>
+false
+</td>
+<td>
+
 </td>
 <td
 style="color:#FF0000;">Failed
