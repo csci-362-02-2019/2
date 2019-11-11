@@ -7,6 +7,9 @@ import java.io.StringWriter;
 import java.io.PrintWriter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 class testdriver2 {
 	
@@ -49,6 +52,31 @@ class testdriver2 {
 		}
 		return false;
 	}
+
+	public enum FORMAT_TYPE {
+		DATE,
+		TIME,
+		TIMESTAMP
+	}
+	
+	public static String format(Date date, Locale locale, FORMAT_TYPE type) {
+		if (date == null || locale == null || type == null) {
+			return "";
+		}
+		//log.debug("Formatting date: " + date + " with locale " + locale);
+		
+		DateFormat dateFormat;
+		
+		if (type == FORMAT_TYPE.TIMESTAMP) {
+			dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		} else if (type == FORMAT_TYPE.TIME) {
+			dateFormat = DateFormat.getTimeInstance(DateFormat.MEDIUM, locale);
+		} else {
+			dateFormat = DateFormat.getDateInstance(DateFormat.SHORT, locale);
+		}
+		return dateFormat.format(date);
+	}
+	
 
 	public static void main(String[] args) {
 		try {
@@ -97,6 +125,34 @@ class testdriver2 {
 			//testcase 12
 			String line12 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase012")).get(4);
 
+			//testcase 13
+			String line13 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase013")).get(4);
+			String[] arr13 = line13.split(",");
+			String[] dateArr = arr13[0].split("/");
+			Date myDate = new Date();
+			myDate.setYear(Integer.parseInt(dateArr[2]));
+			myDate.setMonth((Integer.parseInt(dateArr[0]))-1);
+			myDate.setDate(Integer.parseInt(dateArr[1]));
+			Locale myLocale = new Locale.Builder().setLanguage("en").build();		
+			if (arr13[1].equals("US")) {
+				myLocale = Locale.US;
+			} 
+			FORMAT_TYPE myFT = FORMAT_TYPE.DATE;
+			
+			//testcase14
+			String line14 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase014")).get(4);
+			String[] arr14 = line14.split(",");
+			String[] dateArr14 = arr14[0].split("/");
+			Date myDate14 = new Date();
+			myDate14.setYear(Integer.parseInt(dateArr14[2]));
+			myDate14.setMonth((Integer.parseInt(dateArr14[0]))-1);
+			myDate14.setDate(Integer.parseInt(dateArr14[1]));
+			Locale myLocale14 = new Locale.Builder().setLanguage("en").build();		
+			if (arr14[1].equals("JAPAN")) {
+				myLocale14 = Locale.JAPAN;
+			} 
+			FORMAT_TYPE myFT14 = FORMAT_TYPE.DATE;
+
 			//saving results of testcases
 			String result1 = Boolean.toString(test1.isStringInArray(array1[0], Xarray1));
 			String result2 = Boolean.toString(test1.isStringInArray(array2[0], Xarray2));
@@ -118,16 +174,8 @@ class testdriver2 {
 			String result10 = Boolean.toString(test1.containsUpperAndLowerCase(line10));
 			String result11 = Boolean.toString(test1.containsUpperAndLowerCase(line11));
 			String result12 = Boolean.toString(test1.containsUpperAndLowerCase(line12));
-
-
-
-			//System.out.println("TC1: array1[0] = " + array1[0] + " results1 = " + result1);
-			//System.out.println("TC2: array2[0] = " + array2[0] + " results1 = " + result2);
-			//System.out.println("TC3: array3[0] = " + array3[0] + " results1 = " + result3);
-
-			//System.out.println("TC4: (" + line4 + ") output: " + result4);
-			//System.out.println("TC5: (" + line5 + ") output: " + result5);
-			//System.out.println("TC6: (" + line6 + ") output: " + result6);
+			String result13 = test1.format(myDate,myLocale,myFT);
+			String result14 = test1.format(myDate14,myLocale14,myFT14);
 
 			//writes results to output file
 			BufferedWriter writer = new BufferedWriter(new FileWriter("../2/testcase1Report.txt"));
@@ -154,6 +202,10 @@ class testdriver2 {
     			writer.write(result11);
 			writer.newLine();
     			writer.write(result12);
+			writer.newLine();
+    			writer.write(result13);
+			writer.newLine();
+    			writer.write(result14);
 
 
     			writer.close();

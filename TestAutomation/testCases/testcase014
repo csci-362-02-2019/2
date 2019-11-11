@@ -1,0 +1,6 @@
+14
+Take inputted date, location, and format type and outputs the formatted date
+Format.java
+format(Date date, Locale locale, FORMAT_TYPE type)
+5/13/1998,JAPAN,DATE
+98/05/13
