@@ -65,6 +65,7 @@ cd .. #go back to TestAutomation directory
 #prints out expected output from test case
 echo "<td>" >> reports/testReport.html
 echo ${lineStorage[5]}>> reports/testReport.html
+compStr=${lineStorage[5]}
 echo "</td>" >> reports/testReport.html
 
 cd ..
@@ -85,15 +86,16 @@ echo "<td>" >> reports/testReport.html
 echo $output >> reports/testReport.html
 echo "</td>" >> reports/testReport.html
 
-echo ${lineStorage[5]}
+echo $compStr 
 echo $output
+	
 
 #compares expected output to actual output and decides if test passed or failed
 echo "<td" >> reports/testReport.html
-if [ "$output" = "${lineStorage[5]}" ]; then
-   echo "style=\"color:#0D7010;\">Passed" >> reports/testReport.html
+if [ "$output" = true -a "$compStr" = true ] || [ "$output" = false -a "$compStr" = false ]; then
+	echo "style=\"color:#0D7010;\">Passed" >> reports/testReport.html
 else
-   echo "style=\"color:#FF0000;\">Failed" >> reports/testReport.html
+	echo "style=\"color:#FF0000;\">Failed" >> reports/testReport.html
 fi
 echo "</td>" >> reports/testReport.html
 
