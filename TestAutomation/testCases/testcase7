@@ -1,7 +1,0 @@
-07
-true is returned when string is only digits
-OpenmrsUtil.java
-containsonlyDigits(String test)
-
-false
-

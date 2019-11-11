@@ -1,6 +1,0 @@
-04
-true is returned when string contains a digit
-OpenmrsUtil.java
-containsDigit(String test)
-"Sam1"
-true

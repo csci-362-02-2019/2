@@ -1,0 +1,7 @@
+09
+true is returned when string contains upper and lower case letters
+OpenmrsUtil.java
+containsUpperAndLowerCase(String test)
+"Wright"
+true
+

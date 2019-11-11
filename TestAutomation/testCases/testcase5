@@ -1,7 +1,0 @@
-05
-false is returned when string contains a digit
-OpenmrsUtil.java
-containsDigit(String test)
-Sam
-false
-

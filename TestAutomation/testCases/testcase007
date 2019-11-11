@@ -1,0 +1,7 @@
+07
+Long value is turned into an Integer value
+OpenmrsUtil.java
+convertToInteger(Long longvalue)
+2147483647
+2147483647
+

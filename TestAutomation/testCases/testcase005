@@ -1,0 +1,6 @@
+05
+false is returned when string does not contains a digit
+OpenmrsUtil.java
+containsDigit(String test)
+"Sam"
+false

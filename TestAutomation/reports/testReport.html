@@ -86,7 +86,6 @@ isStringinArray(String str
 ""&"Sam","Wright"
 </td>
 </td>
-</td>
 <td>
 false
 </td>
@@ -94,7 +93,7 @@ false
 false
 </td>
 <td
-style="color:#FF0000;">Failed
+style="color:#0D7010;">Passed
 </td>
 </tr>
 <tr>
@@ -111,7 +110,7 @@ OpenmrsUtil.java
 containsDigit(String test)
 </td>
 <td>
-1
+"Sam1"
 </td>
 </td>
 <td>
@@ -121,7 +120,7 @@ true
 true
 </td>
 <td
-style="color:#FF0000;">Failed
+style="color:#0D7010;">Passed
 </td>
 </tr>
 <tr>
@@ -129,7 +128,7 @@ style="color:#FF0000;">Failed
 05
 </td>
 <td>
-false is returned when string contains a digit
+false is returned when string does not contains a digit
 </td>
 <td>
 OpenmrsUtil.java
@@ -138,8 +137,7 @@ OpenmrsUtil.java
 containsDigit(String test)
 </td>
 <td>
-Sam
-</td>
+"Sam"
 </td>
 </td>
 <td>
@@ -149,7 +147,7 @@ false
 false
 </td>
 <td
-style="color:#FF0000;">Failed
+style="color:#0D7010;">Passed
 </td>
 </tr>
 <tr>
@@ -185,16 +183,100 @@ style="color:#0D7010;">Passed
 07
 </td>
 <td>
-true is returned when string is only digits
+Long value is turned into an Integer value
 </td>
 <td>
 OpenmrsUtil.java
 </td>
 <td>
-containsonlyDigits(String test)
+convertToInteger(Long longvalue)
 </td>
 <td>
-
+2147483647
+</td>
+</td>
+</td>
+<td>
+2147483647
+</td>
+<td>
+2147483647
+</td>
+<td
+style="color:#0D7010;">Passed
+</td>
+</tr>
+<tr>
+<td>
+08
+</td>
+<td>
+Long value is too large to be turned into an Integer, it throws the correct exception
+</td>
+<td>
+OpenmrsUtil.java
+</td>
+<td>
+convertToInteger(Long longvalue)
+</td>
+<td>
+2147483648
+</td>
+</td>
+</td>
+<td>
+java.lang.IllegalArgumentException: 2147483648 cannot be cast to Integer without changing its value.
+</td>
+<td>
+java.lang.IllegalArgumentException: 2147483648 cannot be cast to Integer without changing its value.
+</td>
+<td
+style="color:#0D7010;">Passed
+</td>
+</tr>
+<tr>
+<td>
+09
+</td>
+<td>
+true is returned when string contains upper and lower case letters
+</td>
+<td>
+OpenmrsUtil.java
+</td>
+<td>
+containsUpperAndLowerCase(String test)
+</td>
+<td>
+"Wright"
+</td>
+</td>
+</td>
+<td>
+true
+</td>
+<td>
+true
+</td>
+<td
+style="color:#0D7010;">Passed
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+false is returned when string contains only lower case letters
+</td>
+<td>
+OpenmrsUtil.java
+</td>
+<td>
+containsUpperAndLowerCase(String test)
+</td>
+<td>
+"wright"
 </td>
 </td>
 </td>
@@ -202,9 +284,37 @@ containsonlyDigits(String test)
 false
 </td>
 <td>
-
+false
 </td>
 <td
-style="color:#FF0000;">Failed
+style="color:#0D7010;">Passed
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+false is returned when string contains only upper case letters
+</td>
+<td>
+OpenmrsUtil.java
+</td>
+<td>
+containsUpperAndLowerCase(String test)
+</td>
+<td>
+"WRIGHT"
+</td>
+</td>
+</td>
+<td>
+false
+</td>
+<td>
+false
+</td>
+<td
+style="color:#0D7010;">Passed
 </td>
 </tr>
