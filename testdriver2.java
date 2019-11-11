@@ -139,7 +139,7 @@ class testdriver2 {
 			} 
 			FORMAT_TYPE myFT = FORMAT_TYPE.DATE;
 			
-			//testcase14
+			//testcase 14
 			String line14 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase014")).get(4);
 			String[] arr14 = line14.split(",");
 			String[] dateArr14 = arr14[0].split("/");
@@ -152,6 +152,42 @@ class testdriver2 {
 				myLocale14 = Locale.JAPAN;
 			} 
 			FORMAT_TYPE myFT14 = FORMAT_TYPE.DATE;
+
+			//testcase 15
+			String line15 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase015")).get(4);
+			String[] arr15 = line15.split(",");
+			String[] dateArr15 = arr15[0].split("/");
+			String[] timeArr15 = dateArr15[3].split(":");
+			int year15 = Integer.parseInt(dateArr15[2]);
+			int month15 = Integer.parseInt(dateArr15[0])-1;
+			int day15 = (Integer.parseInt(dateArr15[1]));
+			int hour15 = Integer.parseInt(timeArr15[0]);
+			int min15 = Integer.parseInt(timeArr15[1]);
+			Date myDate15 = new Date(year15,month15,day15,hour15,min15);	
+			Locale myLocale15 = new Locale.Builder().setLanguage("en").build();		
+			if (arr15[1].equals("US")) {
+				myLocale15 = Locale.US;
+			} 
+			//will need to add an if statement here eventually
+			FORMAT_TYPE myFT15 = FORMAT_TYPE.TIME;
+
+			//testcase 16
+			String line16 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase016")).get(4);
+			String[] arr16 = line16.split(",");
+			String[] dateArr16 = arr16[0].split("/");
+			String[] timeArr16 = dateArr16[3].split(":");
+			int year16 = Integer.parseInt(dateArr16[2]);
+			int month16 = Integer.parseInt(dateArr16[0])-1;
+			int day16 = (Integer.parseInt(dateArr16[1]));
+			int hour16 = Integer.parseInt(timeArr16[0]);
+			int min16 = Integer.parseInt(timeArr16[1]);
+			Date myDate16 = new Date(year16,month16,day16,hour16,min16);	
+			Locale myLocale16 = new Locale.Builder().setLanguage("en").build();		
+			if (arr16[1].equals("JAPAN")) {
+				myLocale16 = Locale.JAPAN;
+			} 
+			//will need to add an if statement here eventually
+			FORMAT_TYPE myFT16 = FORMAT_TYPE.TIME;
 
 			//saving results of testcases
 			String result1 = Boolean.toString(test1.isStringInArray(array1[0], Xarray1));
@@ -176,6 +212,9 @@ class testdriver2 {
 			String result12 = Boolean.toString(test1.containsUpperAndLowerCase(line12));
 			String result13 = test1.format(myDate,myLocale,myFT);
 			String result14 = test1.format(myDate14,myLocale14,myFT14);
+			String result15 = test1.format(myDate15,myLocale15,myFT15);
+			String result16 = test1.format(myDate16,myLocale16,myFT16);
+
 
 			//writes results to output file
 			BufferedWriter writer = new BufferedWriter(new FileWriter("../2/testcase1Report.txt"));
@@ -206,6 +245,10 @@ class testdriver2 {
     			writer.write(result13);
 			writer.newLine();
     			writer.write(result14);
+			writer.newLine();
+    			writer.write(result15);
+			writer.newLine();
+    			writer.write(result16);
 
 
     			writer.close();
