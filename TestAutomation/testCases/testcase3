@@ -2,6 +2,6 @@
 false returned when string is null
 OpenmrsUtil.java
 isStringinArray(String str, String[] arr)
-&"Sam","Wright"
+""&"Sam","Wright"
 false
 

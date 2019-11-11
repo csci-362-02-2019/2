@@ -4,4 +4,3 @@ OpenmrsUtil.java
 containsDigit(String test)
 "Sam1"
 true
-

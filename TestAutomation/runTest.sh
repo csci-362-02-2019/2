@@ -86,11 +86,11 @@ echo $output >> reports/testReport.html
 echo "</td>" >> reports/testReport.html
 
 echo ${lineStorage[5]}
-echo $output
+echo ${output}
 
 #compares expected output to actual output and decides if test passed or failed
 echo "<td" >> reports/testReport.html
-if [ "$output" = "${lineStorage[5]}" ]; then
+if [ "${output}" = "${lineStorage[5]}" ]; then
    echo "style=\"color:#0D7010;\">Passed" >> reports/testReport.html
 else
    echo "style=\"color:#FF0000;\">Failed" >> reports/testReport.html

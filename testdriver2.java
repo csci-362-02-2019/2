@@ -67,6 +67,9 @@ class testdriver2 {
 			String result5 = Boolean.toString(test1.containsDigit(line5));
 			String result6 = Boolean.toString(test1.containsDigit(line6));
 
+			//System.out.println("TC4: (" + line4 + ") output: " + result4);
+			//System.out.println("TC6: (" + line6 + ") output: " + result6);
+
 			BufferedWriter writer = new BufferedWriter(new FileWriter("../2/testcase1Report.txt"));
     			writer.write(result1);
 			writer.newLine();
