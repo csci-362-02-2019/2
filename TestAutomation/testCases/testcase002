@@ -1,0 +1,6 @@
+02
+false returned when string is not in array
+OpenmrsUtil.java
+isStringinArray(String str, String[] arr)
+"Dylan"&"Sam","Wright"
+false

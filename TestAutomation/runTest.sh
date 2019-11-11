@@ -86,6 +86,7 @@ echo "<td>" >> reports/testReport.html
 echo $output >> reports/testReport.html
 echo "</td>" >> reports/testReport.html
 
+<<<<<<< HEAD
 echo $compStr 
 echo $output
 	
@@ -94,6 +95,15 @@ echo $output
 echo "<td" >> reports/testReport.html
 if [ "$output" = true -a "$compStr" = true ] || [ "$output" = false -a "$compStr" = false ]; then
 	echo "style=\"color:#0D7010;\">Passed" >> reports/testReport.html
+=======
+echo ${lineStorage[5]}
+echo ${output}
+
+#compares expected output to actual output and decides if test passed or failed
+echo "<td" >> reports/testReport.html
+if [ "${output}" = "${lineStorage[5]}" ]; then
+   echo "style=\"color:#0D7010;\">Passed" >> reports/testReport.html
+>>>>>>> 0b1a0aa26cc157996dbe436ec9a6c447fd7d4363
 else
 	echo "style=\"color:#FF0000;\">Failed" >> reports/testReport.html
 fi

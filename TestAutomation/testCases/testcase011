@@ -1,0 +1,7 @@
+11
+false is returned when string contains only upper case letters
+OpenmrsUtil.java
+containsUpperAndLowerCase(String test)
+"WRIGHT"
+false
+

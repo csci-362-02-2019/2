@@ -1,0 +1,7 @@
+08
+Long value is too large to be turned into an Integer, it throws the correct exception
+OpenmrsUtil.java
+convertToInteger(Long longvalue)
+2147483648
+java.lang.IllegalArgumentException: 2147483648 cannot be cast to Integer without changing its value.
+
