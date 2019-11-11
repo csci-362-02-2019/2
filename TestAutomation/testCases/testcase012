@@ -1,0 +1,7 @@
+12
+false is returned when string is null
+OpenmrsUtil.java
+containsUpperAndLowerCase(String test)
+""
+false
+

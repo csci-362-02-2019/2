@@ -93,6 +93,9 @@ class testdriver2 {
 
 			//testcase 11
 			String line11 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase011")).get(4);
+			
+			//testcase 12
+			String line12 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase012")).get(4);
 
 			//saving results of testcases
 			String result1 = Boolean.toString(test1.isStringInArray(array1[0], Xarray1));
@@ -114,6 +117,7 @@ class testdriver2 {
 			String result9 = Boolean.toString(test1.containsUpperAndLowerCase(line9));
 			String result10 = Boolean.toString(test1.containsUpperAndLowerCase(line10));
 			String result11 = Boolean.toString(test1.containsUpperAndLowerCase(line11));
+			String result12 = Boolean.toString(test1.containsUpperAndLowerCase(line12));
 
 
 
@@ -148,6 +152,8 @@ class testdriver2 {
     			writer.write(result10);
 			writer.newLine();
     			writer.write(result11);
+			writer.newLine();
+    			writer.write(result12);
 
 
     			writer.close();
