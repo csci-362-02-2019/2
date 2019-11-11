@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test Report</title>
+</head>
+<body>
+<table border=1 style=width:75%>
+<tr>
+<th> Test # </th>
+<th> Requirement </th>
+<th> class name </th>
+<th> method name </th>
+<th> input </th>
+<th> expected output </th>
+<th> actual output </th>
+<th> pass/fail </th></tr>
+<tr>
+<td>
+01
+</td>
+<td>
+true returned when string is in array
+</td>
+<td>
+OpenmrsUtil.java
+</td>
+<td>
+isStringinArray(String str
+</td>
+<td>
+"Sam"&"Sam","Wright"
+</td>
+</td>
+</td>
+</td>
+</td>
+</td>
+</td>
+</td>
+</td>
+</td>
+</td>
+</td>
+<td>
+true
+</td>
+<td>
+true
+</td>
+<td
+style="color:#0D7010;">Passed
+</td>
+</tr>
+<tr>
+<td>
+02
+</td>
+<td>
+false returned when string is not in array
+</td>
+<td>
+OpenmrsUtil.java
+</td>
+<td>
+isStringinArray(String str
+</td>
+<td>
+"Dylan"&"Sam","Wright"
+</td>
+</td>
+<td>
+false
+</td>
+<td>
+false
+</td>
+<td
+style="color:#0D7010;">Passed
+</td>
+</tr>
+<tr>
+<td>
+03
+</td>
+<td>
+false returned when string is null
+</td>
+<td>
+OpenmrsUtil.java
+</td>
+<td>
+isStringinArray(String str
+</td>
+<td>
+""&"Sam","Wright"
+</td>
+</td>
+<td>
+false
+</td>
+<td>
+false
+</td>
+<td
+style="color:#0D7010;">Passed
+</td>
+</tr>
+<tr>
+<td>
+04
+</td>
+<td>
+true is returned when string contains a digit
+</td>
+<td>
+OpenmrsUtil.java
+</td>
+<td>
+containsDigit(String test)
+</td>
+<td>
+"Sam1"
+</td>
+</td>
+<td>
+true
+</td>
+<td>
+true
+</td>
+<td
+style="color:#0D7010;">Passed
+</td>
+</tr>
+<tr>
+<td>
+05
+</td>
+<td>
+false is returned when string does not contains a digit
+</td>
+<td>
+OpenmrsUtil.java
+</td>
+<td>
+containsDigit(String test)
+</td>
+<td>
+"Sam"
+</td>
+</td>
+<td>
+false
+</td>
+<td>
+false
+</td>
+<td
+style="color:#0D7010;">Passed
+</td>
+</tr>
+<tr>
+<td>
+06
+</td>
+<td>
+false is returned when string is null
+</td>
+<td>
+OpenmrsUtil.java
+</td>
+<td>
+containsDigit(String test)
+</td>
+<td>
+
+</td>
+</td>
+</td>
+<td>
+false
+</td>
+<td>
+false
+</td>
+<td
+style="color:#0D7010;">Passed
+</td>
+</tr>
+<tr>
+<td>
+07
+</td>
+<td>
+Long value is turned into an Integer value
+</td>
+<td>
+OpenmrsUtil.java
+</td>
+<td>
+convertToInteger(Long longvalue)
+</td>
+<td>
+2147483647
+</td>
+</td>
+</td>
+<td>
+2147483647
+</td>
+<td>
+2147483647
+</td>
+<td
+style="color:#0D7010;">Passed
+</td>
+</tr>
+<tr>
+<td>
+08
+</td>
+<td>
+Long value is too large to be turned into an Integer, it throws the correct exception
+</td>
+<td>
+OpenmrsUtil.java
+</td>
+<td>
+convertToInteger(Long longvalue)
+</td>
+<td>
+2147483648
+</td>
+</td>
+</td>
+<td>
+java.lang.IllegalArgumentException: 2147483648 cannot be cast to Integer without changing its value.
+</td>
+<td>
+java.lang.IllegalArgumentException: 2147483648 cannot be cast to Integer without changing its value.
+</td>
+<td
+style="color:#0D7010;">Passed
+</td>
+</tr>
+<tr>
+<td>
+09
+</td>
+<td>
+true is returned when string contains upper and lower case letters
+</td>
+<td>
+OpenmrsUtil.java
+</td>
+<td>
+containsUpperAndLowerCase(String test)
+</td>
+<td>
+"Wright"
+</td>
+</td>
+</td>
+<td>
+true
+</td>
+<td>
+true
+</td>
+<td
+style="color:#0D7010;">Passed
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+false is returned when string contains only lower case letters
+</td>
+<td>
+OpenmrsUtil.java
+</td>
+<td>
+containsUpperAndLowerCase(String test)
+</td>
+<td>
+"wright"
+</td>
+</td>
+</td>
+<td>
+false
+</td>
+<td>
+false
+</td>
+<td
+style="color:#0D7010;">Passed
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+false is returned when string contains only upper case letters
+</td>
+<td>
+OpenmrsUtil.java
+</td>
+<td>
+containsUpperAndLowerCase(String test)
+</td>
+<td>
+"WRIGHT"
+</td>
+</td>
+</td>
+<td>
+false
+</td>
+<td>
+false
+</td>
+<td
+style="color:#0D7010;">Passed
+</td>
+</tr>
