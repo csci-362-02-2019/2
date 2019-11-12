@@ -79,6 +79,15 @@ class testdriver2 {
 		return dateFormat.format(date);
 	}
 	
+	public static boolean nullSafeEqualsIgnoreCase(String s1, String s2) {
+		if (s1 == null) {
+			return s2 == null;
+		} else if (s2 == null) {
+			return false;
+		}
+		
+		return s1.equalsIgnoreCase(s2);
+	}
 
 	public static void main(String[] args) {
 		try {
@@ -268,12 +277,28 @@ class testdriver2 {
 				if (arr20 == null) {
 					myDate20 = null;
 				}	
+<<<<<<< HEAD
 			}	
 			
 			//test case 21
 			
 		
 			
+=======
+			}
+
+			//testcase 21
+			String line21 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase021")).get(4);
+			String[] arr21 = line21.split(",",2);
+
+			//testcase 22
+			String line22 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase022")).get(4);
+			String[] arr22 = line22.split(",",2);
+
+			//testcase 23
+			String line23 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase023")).get(4);
+			String[] arr23 = line23.split(",",2);	
+>>>>>>> 78036f9269139a43a1c63ffc95140ae7a5fed15b
 
 			//saving results of testcases
 			String result1 = Boolean.toString(test1.isStringInArray(array1[0], Xarray1));
@@ -304,8 +329,14 @@ class testdriver2 {
 			String result18 = test1.format(myDate18,myLocale18,myFT18);
 			String result19 = test1.format(myDate19,myLocale19,myFT19);
 			String result20 = test1.format(myDate20,myLocale20,myFT20);
+<<<<<<< HEAD
 			//String result21 = d1.getDurationInDays().toString();
 			
+=======
+			String result21 = Boolean.toString(test1.nullSafeEqualsIgnoreCase(arr21[0],arr21[1]));
+			String result22 = Boolean.toString(test1.nullSafeEqualsIgnoreCase(arr22[0],arr22[1]));
+			String result23 = Boolean.toString(test1.nullSafeEqualsIgnoreCase(arr23[0],arr23[1]));
+>>>>>>> 78036f9269139a43a1c63ffc95140ae7a5fed15b
 
 
 			//writes results to output file
@@ -346,6 +377,7 @@ class testdriver2 {
 			writer.newLine();
     			writer.write(result18);
 			writer.newLine();
+<<<<<<< HEAD
 			if(result19.equals("")){
 			writer.write("//emptyString");
 			}   			
@@ -353,6 +385,25 @@ class testdriver2 {
     			writer.write(result20);
 			//writer.newLine();
 			//writer.write(result21);
+=======
+			if (result19.equals("")) {
+				writer.write("null");
+			} else {
+				writer.write(result19);
+			}
+			writer.newLine();
+			if (result20.equals("")) {
+				writer.write("null");
+			} else {
+				writer.write(result20);
+			}
+			writer.newLine();
+    			writer.write(result21);
+			writer.newLine();
+    			writer.write(result22);
+			writer.newLine();
+    			writer.write(result23);
+>>>>>>> 78036f9269139a43a1c63ffc95140ae7a5fed15b
     			writer.close();
 
 

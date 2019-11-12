@@ -3,4 +3,8 @@ If any of the arguments are null then method will not fail it will return an emp
 Format.java
 format(Date date, Locale locale, FORMAT_TYPE type)
 5/13/1998/14:30,,TIME
+<<<<<<< HEAD
 //emptyString
+=======
+null
+>>>>>>> 78036f9269139a43a1c63ffc95140ae7a5fed15b

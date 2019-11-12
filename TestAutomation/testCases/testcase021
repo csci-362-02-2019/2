@@ -1,0 +1,6 @@
+21
+returns true if strings are equal
+OpenmrsUtil.java
+nullSafeEqualsIgnoreCase(String s1, String s2)
+"Sam","Sam"
+true

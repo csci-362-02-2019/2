@@ -1,0 +1,6 @@
+23
+returns false if one of the strings are null
+OpenmrsUtil.java
+nullSafeEqualsIgnoreCase(String s1, String s2)
+"Sam",""
+false
