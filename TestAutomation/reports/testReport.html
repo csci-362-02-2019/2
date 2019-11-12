@@ -360,7 +360,7 @@ style="color:#0D7010;">Passed
 13
 </td>
 <td>
-Take inputted date, location, and format type and outputs the formatted date
+Take inputted date, location, and format_type:DATE and outputs the formatted date
 </td>
 <td>
 Format.java
@@ -458,6 +458,114 @@ format(Date date
 </td>
 <td>
 14:30:00
+</td>
+<td
+style="color:#0D7010;">Passed
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td>
+Take inputted date, location, and format_type:TIMESTAMP and outputs the formatted date
+</td>
+<td>
+Format.java
+</td>
+<td>
+format(Date date
+</td>
+<td>
+5/13/1998/14:30,US,TIMESTAMP
+</td>
+</td>
+<td>
+May 13, 1998 2:30:00 PM EDT
+</td>
+<td>
+May 13, 1998 2:30:00 PM EDT
+</td>
+<td
+style="color:#0D7010;">Passed
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td>
+Take inputted date, location, and format_type:TIMESTAMP and outputs the formatted date
+</td>
+<td>
+Format.java
+</td>
+<td>
+format(Date date
+</td>
+<td>
+5/13/1998/14:30,JAPAN,TIMESTAMP
+</td>
+</td>
+<td>
+1998/05/13 14:30:00 EDT
+</td>
+<td>
+1998/05/13 14:30:00 EDT
+</td>
+<td
+style="color:#0D7010;">Passed
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td>
+If any of the arguments are null then method will not fail it will return an empty string
+</td>
+<td>
+Format.java
+</td>
+<td>
+format(Date date
+</td>
+<td>
+5/13/1998/14:30,,TIME
+</td>
+</td>
+<td>
+
+</td>
+<td>
+
+</td>
+<td
+style="color:#0D7010;">Passed
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+If any of the arguments are null then method will not fail it will return an empty string
+</td>
+<td>
+Format.java
+</td>
+<td>
+format(Date date
+</td>
+<td>
+,US,TIME
+</td>
+</td>
+<td>
+
+</td>
+<td>
+
 </td>
 <td
 style="color:#0D7010;">Passed
