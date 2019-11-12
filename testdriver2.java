@@ -12,6 +12,8 @@ import java.util.Date;
 import java.util.Locale;
 
 class testdriver2 {
+		
+	
 	
 	public static boolean isStringInArray(String str, String[] arr) {
 		boolean retVal = false;
@@ -267,6 +269,11 @@ class testdriver2 {
 					myDate20 = null;
 				}	
 			}	
+			
+			//test case 21
+			
+		
+			
 
 			//saving results of testcases
 			String result1 = Boolean.toString(test1.isStringInArray(array1[0], Xarray1));
@@ -297,6 +304,8 @@ class testdriver2 {
 			String result18 = test1.format(myDate18,myLocale18,myFT18);
 			String result19 = test1.format(myDate19,myLocale19,myFT19);
 			String result20 = test1.format(myDate20,myLocale20,myFT20);
+			//String result21 = d1.getDurationInDays().toString();
+			
 
 
 			//writes results to output file
@@ -337,9 +346,13 @@ class testdriver2 {
 			writer.newLine();
     			writer.write(result18);
 			writer.newLine();
-    			writer.write(result19);
+			if(result19.equals("")){
+			writer.write("//emptyString");
+			}   			
 			writer.newLine();
     			writer.write(result20);
+			//writer.newLine();
+			//writer.write(result21);
     			writer.close();
 
 
