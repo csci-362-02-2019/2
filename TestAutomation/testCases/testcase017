@@ -1,0 +1,6 @@
+17
+Take inputted date, location, and format_type:TIMESTAMP and outputs the formatted date
+Format.java
+format(Date date, Locale locale, FORMAT_TYPE type)
+5/13/1998/14:30,US,TIMESTAMP
+May 13, 1998 2:30:00 PM EDT

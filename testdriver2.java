@@ -189,6 +189,85 @@ class testdriver2 {
 			//will need to add an if statement here eventually
 			FORMAT_TYPE myFT16 = FORMAT_TYPE.TIME;
 
+			//testcase 17
+			String line17 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase017")).get(4);
+			String[] arr17 = line17.split(",");
+			String[] dateArr17 = arr17[0].split("/");
+			String[] timeArr17 = dateArr17[3].split(":");
+			int year17 = Integer.parseInt(dateArr17[2])-1900;
+			int month17 = Integer.parseInt(dateArr17[0])-1;
+			int day17 = (Integer.parseInt(dateArr17[1]));
+			int hour17 = Integer.parseInt(timeArr17[0]);
+			int min17 = Integer.parseInt(timeArr17[1]);
+			Date myDate17 = new Date(year17,month17,day17,hour17,min17);	
+			Locale myLocale17 = new Locale.Builder().setLanguage("en").build();		
+			if (arr17[1].equals("US")) {
+				myLocale17 = Locale.US;
+			} 
+			//will need to add an if statement here eventually
+			FORMAT_TYPE myFT17 = FORMAT_TYPE.TIMESTAMP;
+
+			//testcase 18
+			String line18 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase018")).get(4);
+			String[] arr18 = line18.split(",");
+			String[] dateArr18 = arr18[0].split("/");
+			String[] timeArr18 = dateArr18[3].split(":");
+			int year18 = Integer.parseInt(dateArr18[2])-1900;
+			int month18 = Integer.parseInt(dateArr18[0])-1;
+			int day18 = (Integer.parseInt(dateArr18[1]));
+			int hour18 = Integer.parseInt(timeArr18[0]);
+			int min18 = Integer.parseInt(timeArr18[1]);
+			Date myDate18 = new Date(year18,month18,day18,hour18,min18);	
+			Locale myLocale18 = new Locale.Builder().setLanguage("en").build();		
+			if (arr18[1].equals("JAPAN")) {
+				myLocale18 = Locale.JAPAN;
+			} 
+			//will need to add an if statement here eventually
+			FORMAT_TYPE myFT18 = FORMAT_TYPE.TIMESTAMP;
+
+			//test case 19
+			String line19 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase019")).get(4);
+			String[] arr19 = line19.split(",");
+			String[] dateArr19 = arr19[0].split("/");
+			String[] timeArr19 = dateArr19[3].split(":");
+			int year19 = Integer.parseInt(dateArr19[2])-1900;
+			int month19 = Integer.parseInt(dateArr19[0])-1;
+			int day19 = (Integer.parseInt(dateArr19[1]));
+			int hour19 = Integer.parseInt(timeArr19[0]);
+			int min19 = Integer.parseInt(timeArr19[1]);
+			Date myDate19 = new Date(year19,month19,day19,hour19,min19);	
+			Locale myLocale19 = new Locale.Builder().setLanguage("en").build();		
+			if (arr19[1].equals("")) {
+				myLocale19 = null;
+			} 
+			//will need to add an if statement here eventually
+			FORMAT_TYPE myFT19 = FORMAT_TYPE.TIME;
+
+			//test case 20
+			FORMAT_TYPE myFT20 = null;
+			Locale myLocale20 = null;
+			Date myDate20 = null;
+			String[] arr20 = null;
+			try {
+				String line20 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase020")).get(4);
+				arr20 = line20.split(",");
+				String[] dateArr20 = arr20[0].split("/");
+				int year20 = Integer.parseInt(dateArr20[2]);
+				int month20 = Integer.parseInt(dateArr20[0])-1;
+				int day20 = (Integer.parseInt(dateArr20[1]));
+				myDate20 = new Date(year20,month20,day20);	
+				myLocale20 = new Locale.Builder().setLanguage("en").build();		
+				if (arr20[1].equals("")) {
+					myLocale20 = null;
+				} 
+				//will need to add an if statement here eventually
+				myFT20 = FORMAT_TYPE.TIME;
+			} catch (Exception e) {
+				if (arr20 == null) {
+					myDate20 = null;
+				}	
+			}	
+
 			//saving results of testcases
 			String result1 = Boolean.toString(test1.isStringInArray(array1[0], Xarray1));
 			String result2 = Boolean.toString(test1.isStringInArray(array2[0], Xarray2));
@@ -214,6 +293,10 @@ class testdriver2 {
 			String result14 = test1.format(myDate14,myLocale14,myFT14);
 			String result15 = test1.format(myDate15,myLocale15,myFT15);
 			String result16 = test1.format(myDate16,myLocale16,myFT16);
+			String result17 = test1.format(myDate17,myLocale17,myFT17);
+			String result18 = test1.format(myDate18,myLocale18,myFT18);
+			String result19 = test1.format(myDate19,myLocale19,myFT19);
+			String result20 = test1.format(myDate20,myLocale20,myFT20);
 
 
 			//writes results to output file
@@ -249,8 +332,14 @@ class testdriver2 {
     			writer.write(result15);
 			writer.newLine();
     			writer.write(result16);
-
-
+			writer.newLine();
+    			writer.write(result17);
+			writer.newLine();
+    			writer.write(result18);
+			writer.newLine();
+    			writer.write(result19);
+			writer.newLine();
+    			writer.write(result20);
     			writer.close();
 
 
