@@ -525,18 +525,12 @@ format(Date date
 5/13/1998/14:30,,TIME
 </td>
 </td>
-<td>
-<<<<<<< HEAD
-//emptyString
 </td>
 <td>
-//emptyString
-=======
 null
 </td>
 <td>
 null
->>>>>>> 78036f9269139a43a1c63ffc95140ae7a5fed15b
 </td>
 <td
 style="color:#0D7010;">Passed
@@ -652,28 +646,55 @@ style="color:#0D7010;">Passed
 </tr>
 <tr>
 <td>
-021
+24
 </td>
 <td>
-returns the duration in days
+returns true if strings are equal but cases are different
 </td>
 <td>
-Duration.java
+OpenmrsUtil.java
 </td>
 <td>
-getDurationInDays(Duration duration
+nullSafeEqualsIgnoreCase(String s1
 </td>
 <td>
-55.0 months
+"SAM","sam"
 </td>
 </td>
 <td>
-1650.0
+true
 </td>
 <td>
-
+true
 </td>
 <td
-style="color:#FF0000;">Failed
+style="color:#0D7010;">Passed
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td>
+returns true if both strings are null
+</td>
+<td>
+OpenmrsUtil.java
+</td>
+<td>
+nullSafeEqualsIgnoreCase(String s1
+</td>
+<td>
+"",""
+</td>
+</td>
+<td>
+true
+</td>
+<td>
+true
+</td>
+<td
+style="color:#0D7010;">Passed
 </td>
 </tr>

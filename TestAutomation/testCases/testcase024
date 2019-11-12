@@ -1,6 +1,6 @@
-024
-returns true if the date entered was yesterday.
+24
+returns true if strings are equal but cases are different
 OpenmrsUtil.java
-isYesterday(Date date)
-1963,05,11
-false
+nullSafeEqualsIgnoreCase(String s1, String s2)
+"SAM","sam"
+true

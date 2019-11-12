@@ -10,6 +10,8 @@ import java.util.regex.Pattern;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Calendar;
+
 
 class testdriver2 {
 	
@@ -289,6 +291,14 @@ class testdriver2 {
 			String line23 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase023")).get(4);
 			String[] arr23 = line23.split(",",2);	
 
+			//testcase 24
+			String line24 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase024")).get(4);
+			String[] arr24 = line24.split(",",2);	
+
+			//testcase 25
+			String line25 = Files.readAllLines(Paths.get("../2/TestAutomation/testCases/testcase025")).get(4);
+			String[] arr25 = line25.split(",",2);	
+
 			//saving results of testcases
 			String result1 = Boolean.toString(test1.isStringInArray(array1[0], Xarray1));
 			String result2 = Boolean.toString(test1.isStringInArray(array2[0], Xarray2));
@@ -321,8 +331,9 @@ class testdriver2 {
 			String result21 = Boolean.toString(test1.nullSafeEqualsIgnoreCase(arr21[0],arr21[1]));
 			String result22 = Boolean.toString(test1.nullSafeEqualsIgnoreCase(arr22[0],arr22[1]));
 			String result23 = Boolean.toString(test1.nullSafeEqualsIgnoreCase(arr23[0],arr23[1]));
-
-
+			String result24 = Boolean.toString(test1.nullSafeEqualsIgnoreCase(arr24[0],arr24[1]));
+			String result25 = Boolean.toString(test1.nullSafeEqualsIgnoreCase(arr25[0],arr25[1]));
+			
 			//writes results to output file
 			BufferedWriter writer = new BufferedWriter(new FileWriter("../2/testcase1Report.txt"));
     			writer.write(result1);
@@ -378,6 +389,10 @@ class testdriver2 {
     			writer.write(result22);
 			writer.newLine();
     			writer.write(result23);
+			writer.newLine();
+    			writer.write(result24);
+			writer.newLine();
+    			writer.write(result25);
     			writer.close();
 
 
@@ -386,4 +401,5 @@ class testdriver2 {
 		}
 	}
 }
+
 

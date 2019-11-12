@@ -16,12 +16,10 @@ false
 14:30:00
 May 13, 1998 2:30:00 PM EDT
 1998/05/13 14:30:00 EDT
-<<<<<<< HEAD
-//emptyString
-=======
 null
 null
 true
 false
 false
->>>>>>> 78036f9269139a43a1c63ffc95140ae7a5fed15b
+true
+true
