@@ -52,13 +52,11 @@ public class Driver {
 				if (methodCalled.equals("isStringinArray(String str, String[] arr)")) {	
 					String[] array = line.split("&",2);
 					String[] Xarray = array[1].split(",");
-					result = Boolean.toString(tester.isStringInArray(array[0], Xarray));
-		    			writer.write(result);
+		    			writer.write(Boolean.toString(tester.isStringInArray(array[0], Xarray)));
 
 				//containsDigit method
 				} else if (methodCalled.equals("containsDigit(String test)")) {
-					result = Boolean.toString(tester.containsDigit(line));
-		    			writer.write(result);
+		    			writer.write(Boolean.toString(tester.containsDigit(line)));
 
 				//convertToInteger method
 				} else if (methodCalled.equals("convertToInteger(Long longvalue)")) {
@@ -75,8 +73,7 @@ public class Driver {
 
 				//containsUpperAndLowerCase method
 				} else if (methodCalled.equals("containsUpperAndLowerCase(String test)")) {
-					result = Boolean.toString(tester.containsUpperAndLowerCase(line));
-					writer.write(result);
+					writer.write(Boolean.toString(tester.containsUpperAndLowerCase(line)));
 
 				//Format method	
 				} else if (methodCalled.equals("format(Date date, Locale locale, FORMAT_TYPE type)")) {
@@ -112,15 +109,13 @@ public class Driver {
 							myDate.setMinutes(Integer.parseInt(timeArr[1]));
 							myFT = methods.FORMAT_TYPE.TIMESTAMP;
 						}
-						result = tester.format(myDate,myLocale,myFT);
-						writer.write(result);
+						writer.write(tester.format(myDate,myLocale,myFT));
 					}
 
 				//nullSafeEqualsIgnoreCase method	
 				} else if (methodCalled.equals("nullSafeEqualsIgnoreCase(String s1, String s2)")) {
 					String[] arr = line.split(",",2);
-					result = Boolean.toString(tester.nullSafeEqualsIgnoreCase(arr[0],arr[1]));
-					writer.write(result);				
+					writer.write(Boolean.toString(tester.nullSafeEqualsIgnoreCase(arr[0],arr[1])));				
 				}
 				writer.newLine();
 			}
