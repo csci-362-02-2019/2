@@ -85,8 +85,8 @@ echo "<td>" >> reports/testReport.html
 echo $output >> reports/testReport.html
 echo "</td>" >> reports/testReport.html
 
-echo ${lineStorage[5]}
-echo ${output}
+#echo ${lineStorage[5]}
+#echo ${output}
 
 #compares expected output to actual output and decides if test passed or failed
 echo "<td" >> reports/testReport.html
