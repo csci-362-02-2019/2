@@ -36,7 +36,7 @@ echo "<tr>" >> ../reports/testReport.html
    counter=0
 	while IFS='' read -r line;do #reads lines from a test Case file
 	   lineStorage[$counter]="$line" 
-#0=TestCaseNumber, 1=Requirement, 2=ClassName, 3=MethodName, 4=input, 5=expectedOutput, 6=classpath, 7=DriverName
+#0=TestCaseNumber, 1=Requirement, 2=ClassName, 3=MethodName, 4=input, 5=expectedOutput
 	  if [ "$counter" -eq 0 ] || [ "$counter" -eq 1 ] || [ "$counter" -eq 2 ] || [ "$counter" -eq 4 ] 
 	   then
 		echo "<td>" >> ../reports/testReport.html
@@ -85,8 +85,11 @@ echo "<td>" >> reports/testReport.html
 echo $output >> reports/testReport.html
 echo "</td>" >> reports/testReport.html
 
+<<<<<<< HEAD:TestAutomation/runTest.sh
 #echo ${lineStorage[5]}
 #echo ${output}
+=======
+>>>>>>> d89c01c10e03a5555bc68635f389890c88863e20:TestAutomation/runAllTests.sh
 
 #compares expected output to actual output and decides if test passed or failed
 echo "<td" >> reports/testReport.html
