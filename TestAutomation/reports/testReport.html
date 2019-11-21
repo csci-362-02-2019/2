@@ -25,7 +25,7 @@ true returned when string is in array
 OpenmrsUtil.java
 </td>
 <td>
-isStringinArray(String str
+isStringinArray(String str, String[] arr)
 </td>
 <td>
 "Sam"&"Sam","Wright"
@@ -53,7 +53,7 @@ false returned when string is not in array
 OpenmrsUtil.java
 </td>
 <td>
-isStringinArray(String str
+isStringinArray(String str, String[] arr)
 </td>
 <td>
 "Dylan"&"Sam","Wright"
@@ -80,7 +80,7 @@ false returned when string is null
 OpenmrsUtil.java
 </td>
 <td>
-isStringinArray(String str
+isStringinArray(String str, String[] arr)
 </td>
 <td>
 ""&"Sam","Wright"
@@ -357,7 +357,7 @@ Take inputted date, location, and format_type:DATE and outputs the formatted dat
 Format.java
 </td>
 <td>
-format(Date date
+format(Date date, Locale locale, FORMAT_TYPE type)
 </td>
 <td>
 5/13/1998,US,DATE
@@ -384,7 +384,7 @@ Take inputted date, location, and format_type:DATE and outputs the formatted dat
 Format.java
 </td>
 <td>
-format(Date date
+format(Date date, Locale locale, FORMAT_TYPE type)
 </td>
 <td>
 5/13/1998,JAPAN,DATE
@@ -411,7 +411,7 @@ Take inputted date, location, and format_type:TIME and outputs the formatted dat
 Format.java
 </td>
 <td>
-format(Date date
+format(Date date, Locale locale, FORMAT_TYPE type)
 </td>
 <td>
 5/13/1998/14:30,US,TIME
@@ -438,7 +438,7 @@ Take inputted date, location, and format_type:TIME and outputs the formatted dat
 Format.java
 </td>
 <td>
-format(Date date
+format(Date date, Locale locale, FORMAT_TYPE type)
 </td>
 <td>
 5/13/1998/14:30,JAPAN,TIME
@@ -465,7 +465,7 @@ Take inputted date, location, and format_type:TIMESTAMP and outputs the formatte
 Format.java
 </td>
 <td>
-format(Date date
+format(Date date, Locale locale, FORMAT_TYPE type)
 </td>
 <td>
 5/13/1998/14:30,US,TIMESTAMP
@@ -492,7 +492,7 @@ Take inputted date, location, and format_type:TIMESTAMP and outputs the formatte
 Format.java
 </td>
 <td>
-format(Date date
+format(Date date, Locale locale, FORMAT_TYPE type)
 </td>
 <td>
 5/13/1998/14:30,JAPAN,TIMESTAMP
@@ -519,7 +519,7 @@ If any of the arguments are null then method will not fail it will return an emp
 Format.java
 </td>
 <td>
-format(Date date
+format(Date date, Locale locale, FORMAT_TYPE type)
 </td>
 <td>
 5/13/1998/14:30,,TIME
@@ -547,7 +547,7 @@ If any of the arguments are null then method will not fail it will return an emp
 Format.java
 </td>
 <td>
-format(Date date
+format(Date date, Locale locale, FORMAT_TYPE type)
 </td>
 <td>
 ,US,TIME
@@ -574,7 +574,7 @@ returns true if strings are equal
 OpenmrsUtil.java
 </td>
 <td>
-nullSafeEqualsIgnoreCase(String s1
+nullSafeEqualsIgnoreCase(String s1, String s2)
 </td>
 <td>
 "Sam","Sam"
@@ -601,7 +601,7 @@ returns false if strings are not equal
 OpenmrsUtil.java
 </td>
 <td>
-nullSafeEqualsIgnoreCase(String s1
+nullSafeEqualsIgnoreCase(String s1, String s2)
 </td>
 <td>
 "Sam","Wright"
@@ -628,7 +628,7 @@ returns false if one of the strings are null
 OpenmrsUtil.java
 </td>
 <td>
-nullSafeEqualsIgnoreCase(String s1
+nullSafeEqualsIgnoreCase(String s1, String s2)
 </td>
 <td>
 "Sam",""
@@ -655,7 +655,7 @@ returns true if strings are equal but cases are different
 OpenmrsUtil.java
 </td>
 <td>
-nullSafeEqualsIgnoreCase(String s1
+nullSafeEqualsIgnoreCase(String s1, String s2)
 </td>
 <td>
 "SAM","sam"
@@ -682,7 +682,7 @@ returns true if both strings are null
 OpenmrsUtil.java
 </td>
 <td>
-nullSafeEqualsIgnoreCase(String s1
+nullSafeEqualsIgnoreCase(String s1, String s2)
 </td>
 <td>
 "",""

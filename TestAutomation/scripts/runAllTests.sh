@@ -47,7 +47,7 @@ echo "<tr>" >> ../reports/testReport.html
               
                METHOD=${lineStorage[$counter]}
                MyMethod=${METHOD##* }
-                echo $METHOD | sed 's/,.*//' >> ../reports/testReport.html
+                echo $METHOD >> ../reports/testReport.html
 		
 	  fi
 
