@@ -44,7 +44,7 @@ public class Driver {
 				//get method name from test case
 				String methodCalled = Files.readAllLines(Paths.get(fname + j)).get(3);
 
-				methods tester = new methods();
+				methods t = new methods();
 
 				String line = Files.readAllLines(Paths.get(fname + j)).get(4);
 
@@ -52,17 +52,17 @@ public class Driver {
 				if (methodCalled.equals("isStringinArray(String str, String[] arr)")) {	
 					String[] array = line.split("&",2);
 					String[] Xarray = array[1].split(",");
-		    			writer.write(Boolean.toString(tester.isStringInArray(array[0], Xarray)));
+		    			writer.write(Boolean.toString(t.isStringInArray(array[0], Xarray)));
 
 				//containsDigit method
 				} else if (methodCalled.equals("containsDigit(String test)")) {
-		    			writer.write(Boolean.toString(tester.containsDigit(line)));
+		    			writer.write(Boolean.toString(t.containsDigit(line)));
 
 				//convertToInteger method
 				} else if (methodCalled.equals("convertToInteger(Long longvalue)")) {
 					long long1 = Long.parseLong(line, 10);
 					try {
-						result = Integer.toString(tester.convertToInteger(long1));
+						result = Integer.toString(t.convertToInteger(long1));
 					} catch (Exception e) {
 						StringWriter sw = new StringWriter();
 						e.printStackTrace(new PrintWriter(sw));
@@ -73,7 +73,7 @@ public class Driver {
 
 				//containsUpperAndLowerCase method
 				} else if (methodCalled.equals("containsUpperAndLowerCase(String test)")) {
-					writer.write(Boolean.toString(tester.containsUpperAndLowerCase(line)));
+					writer.write(Boolean.toString(t.containsUpperAndLowerCase(line)));
 
 				//Format method	
 				} else if (methodCalled.equals("format(Date date, Locale locale, FORMAT_TYPE type)")) {
@@ -109,13 +109,13 @@ public class Driver {
 							myDate.setMinutes(Integer.parseInt(timeArr[1]));
 							myFT = methods.FORMAT_TYPE.TIMESTAMP;
 						}
-						writer.write(tester.format(myDate,myLocale,myFT));
+						writer.write(t.format(myDate,myLocale,myFT));
 					}
 
 				//nullSafeEqualsIgnoreCase method	
 				} else if (methodCalled.equals("nullSafeEqualsIgnoreCase(String s1, String s2)")) {
 					String[] arr = line.split(",",2);
-					writer.write(Boolean.toString(tester.nullSafeEqualsIgnoreCase(arr[0],arr[1])));				
+					writer.write(Boolean.toString(t.nullSafeEqualsIgnoreCase(arr[0],arr[1])));				
 				}
 				writer.newLine();
 			}
