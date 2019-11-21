@@ -37,7 +37,7 @@ echo "<tr>" >> ../reports/testReport.html
    counter=0
 	while IFS='' read -r line;do #reads lines from a test Case file
 	   lineStorage[$counter]="$line" 
-#0=TestCaseNumber, 1=Requirement, 2=ClassName, 3=MethodName, 4=input, 5=expectedOutput, 6=classpath, 7=DriverName
+#0=TestCaseNumber, 1=Requirement, 2=ClassName, 3=MethodName, 4=input, 5=expectedOutput
 	  if [ "$counter" -eq 0 ] || [ "$counter" -eq 1 ] || [ "$counter" -eq 2 ] || [ "$counter" -eq 4 ] 
 	   then
 		echo "<td>" >> ../reports/testReport.html
@@ -50,11 +50,6 @@ echo "<tr>" >> ../reports/testReport.html
                 echo $METHOD >> ../reports/testReport.html
 		
 	  fi
-
-
-
-
-
 
 	((counter++))
 	        echo "</td>" >> ../reports/testReport.html
