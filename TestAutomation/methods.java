@@ -48,7 +48,7 @@ public class methods {
 	
 	public static boolean containsUpperAndLowerCase(String test) {
 		if (test != null) {
-			Pattern pattern = Pattern.compile("^(?=.*?[A-Z])(?=.*?[a-z])[\\w|\\W]*$");
+			Pattern pattern = Pattern.compile("^(?=.?[A-Z])(?=.*?[a-z])[\\w|\\W]*$");
 			Matcher matcher = pattern.matcher(test);
 			return matcher.matches();
 		}
