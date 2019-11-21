@@ -1,0 +1,11 @@
+line 1: test ID
+line 2: purpose of testcase
+line 3: class the method is found in
+line 4: method being tested
+line 5: test inputs
+line 6: expected outcomes
+
+note:
+-test case name must be the same as the others so "testcase000" replacing the zero's with the testcase number
+-any added test cases must be numbered in order
+	-so if you were to add a new test case now it would be "testcase026" since the last one in the testcase folder is "testcase025"

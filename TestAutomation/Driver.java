@@ -27,7 +27,7 @@ public class Driver {
 			int numOfTestCases = 25;
 			
 			//starting up the writer
-			BufferedWriter writer = new BufferedWriter(new FileWriter(home + "/2/TestAutomation/driverReport.txt"));
+			BufferedWriter writer = new BufferedWriter(new FileWriter(home + "/2/TestAutomation/reports/driverReport.txt"));
 
 			String result;
 

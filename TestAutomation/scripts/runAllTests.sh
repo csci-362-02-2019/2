@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "changing directory to testCases..."
+cd ..
 cd testCases
 echo "reading test cases..."
 
@@ -68,12 +69,13 @@ echo ${lineStorage[5]}>> reports/testReport.html
 echo "</td>" >> reports/testReport.html
 
 #compiling and running the driver
+
 javac Driver.java
 java Driver
 
 
 #reading the report that is produced by the driver
-IFS=$'\n' read -d '' -r -a lines < ~/2/TestAutomation/driverReport.txt
+IFS=$'\n' read -d '' -r -a lines < ~/2/TestAutomation/reports/driverReport.txt
 
 
 

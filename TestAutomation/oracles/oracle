@@ -1,0 +1,27 @@
+true
+false
+false
+true
+false
+false
+2147483647
+java.lang.IllegalArgumentException: 2147483648 cannot be cast to Integer without changing its value.
+true
+false
+false
+false
+5/13/98
+98/05/13
+2:30:00 PM
+14:30:00
+May 13, 1998 2:30:00 PM EDT
+1998/05/13 14:30:00 EDT
+null
+null
+true
+false
+false
+true
+true
+
+***This is what the correct output should be for our 25 test cases in order and should be the same as driverReport unless you have added testcases
