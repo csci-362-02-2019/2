@@ -24,9 +24,6 @@ echo  "<th> expected output </th>">> ../reports/testReport.html
 echo  "<th> actual output </th>" >> ../reports/testReport.html
 echo  "<th> pass/fail </th></tr>">> ../reports/testReport.html
 #-----------------------------------------------------------------------------
-#-----------------------------------------------------------------------------
-
-
 
 testCaseTracker=1  #tracks what test case is being worked on
 lineStorage=( ) #array for storing lines from test case files
@@ -64,25 +61,17 @@ echo ${lineStorage[5]}>> reports/testReport.html
 echo "</td>" >> reports/testReport.html
 
 #compiling and running the driver
-
 javac Driver.java
 java Driver
 
-
 #reading the report that is produced by the driver
 IFS=$'\n' read -d '' -r -a lines < ~/2/TestAutomation/reports/driverReport.txt
-
-
-
 
 #pipes input into java driver classes and puts them in html table
 output=$(echo ${lines[($testCaseTracker)-1]})
 echo "<td>" >> reports/testReport.html
 echo $output >> reports/testReport.html
 echo "</td>" >> reports/testReport.html
-
-#echo ${lineStorage[5]}
-#echo ${output}
 
 #compares expected output to actual output and decides if test passed or failed
 echo "<td" >> reports/testReport.html
@@ -92,9 +81,6 @@ else
    echo "style=\"color:#FF0000;\">Failed" >> reports/testReport.html
 fi
 echo "</td>" >> reports/testReport.html
-
-
-
 
 echo "</tr>" >> reports/testReport.html #ends a row in the table
 echo "test case $testCaseTracker complete"
